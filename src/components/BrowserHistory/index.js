@@ -96,23 +96,6 @@ class BrowserHistory extends Component {
       eachItem.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
 
-    const isHistoryEmpty = () => {
-      if (historyList.length === 0 || filteredList.length === 0) {
-        return <p>There is no history to show</p>
-      }
-      return (
-        <ul className="list-container">
-          {filteredList.map(eachItem => (
-            <HistoryItem
-              historyItem={eachItem}
-              key={eachItem.id}
-              deleteHistoryItem={this.deleteHistoryItem}
-            />
-          ))}
-        </ul>
-      )
-    }
-
     return (
       <div className="bg-container">
         <div className="navbar">
@@ -137,7 +120,22 @@ class BrowserHistory extends Component {
             />
           </div>
         </div>
-        {isHistoryEmpty}
+        {(historyList.length === 0 || filteredList.length === 0) && (
+          <div className="empty-history-container">
+            <p className="empty-history-message">There is no history to show</p>
+          </div>
+        )}
+        {!(historyList.length === 0 || filteredList.length === 0) && (
+          <ul className="list-container">
+            {filteredList.map(eachItem => (
+              <HistoryItem
+                historyItem={eachItem}
+                key={eachItem.id}
+                deleteHistoryItem={this.deleteHistoryItem}
+              />
+            ))}
+          </ul>
+        )}
       </div>
     )
   }

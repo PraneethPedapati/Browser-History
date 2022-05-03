@@ -53,3 +53,15 @@
   background-color: #f8fafc;
   border-radius: 8px;
 }
+
+.empty-history-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  margin: 0px;
+}
+
+.empty-history-message {
+  font-size: 25px;
+}
