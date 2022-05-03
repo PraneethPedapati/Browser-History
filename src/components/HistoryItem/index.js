@@ -13,21 +13,22 @@ const HistoryItem = props => {
       <p className="time">{timeAccessed}</p>
       <div className="history-website">
         <img src={logoUrl} alt="domain logo" className="website-logo" />
-        <p className="title">{title}</p>
-        <a href={domainUrl} className="domain-url">
-          {domainUrl}
-        </a>
+        <div className="website-info">
+          <p className="title">{title}</p>
+          <p className="domain-url">{domainUrl}</p>
+        </div>
+        <button
+          className="delete-icon-container"
+          type="button"
+          onClick={onDelete}
+          testid="delete"
+        >
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
+            alt="delete"
+          />
+        </button>
       </div>
-      <button
-        className="delete-icon-container"
-        type="button"
-        onClick={onDelete}
-      >
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
-          alt="delete"
-        />
-      </button>
     </li>
   )
 }

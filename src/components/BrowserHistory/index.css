@@ -1,17 +1,18 @@
 .bg-container {
   background-color: #ececec;
-  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 15px;
 }
 
 .navbar {
   background-color: #3367d6;
   display: flex;
   align-items: center;
-  padding: 18px 45px;
+  padding: 18px 15px;
 }
 
 .img-container {
-  width: 30%;
+  margin-right: 40px;
 }
 
 .logo-img {
@@ -63,5 +64,16 @@
 }
 
 .empty-history-message {
-  font-size: 25px;
+  font-size: 18px;
+  color: #475569;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding: 18px 45px;
+  }
+
+  .img-container {
+    margin-right: 150px;
+  }
 }
