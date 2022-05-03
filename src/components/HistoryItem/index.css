@@ -1,0 +1,37 @@
+.list-item {
+  display: flex;
+  align-items: center;
+}
+
+.history-website {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.time {
+  font-size: 12px;
+  margin-right: 55px;
+}
+
+.website-logo {
+  height: 20px;
+  margin-right: 15px;
+}
+
+.title {
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.domain-url {
+  font-size: 14px;
+  color: #64748b;
+  text-decoration: none;
+}
+
+.delete-icon-container {
+  text-align: right;
+  background-color: transparent;
+  border-style: none;
+}
